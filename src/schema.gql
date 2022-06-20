@@ -1,0 +1,24 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  _id: String!
+
+  """User Name"""
+  name: String!
+  age: Int! @deprecated(reason: "User Age")
+}
+
+type Query {
+  users: [User!]!
+}
+
+type Mutation {
+  addUser(newUserData: NewUserInput!): User!
+}
+
+input NewUserInput {
+  name: String!
+  age: Int!
+}
